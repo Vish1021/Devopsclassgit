@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Shop</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: darkslategray;
+      background-color: whitesmoke;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: white;
+      border-bottom: 1px solid lightgray;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: seagreen;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      font-size: 16px;
+      color: darkslategray;
+    }
+
+    .nav-links a:hover {
+      color: seagreen;
+    }
+
+    .cart {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: honeydew;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: darkslategray;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: dimgray;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: seagreen;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: darkgreen;
+    }
+
+    /* Products */
+    .products {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+      color: darkslategray;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: white;
+      border: 1px solid lightgray;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 160px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      background-color: honeydew;
+      color: seagreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: darkslategray;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: seagreen;
+      margin-bottom: 15px;
+    }
+
+    /* Features */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 50px 40px;
+      background-color: honeydew;
+      text-align: center;
+    }
+
+    .feature-box {
+      padding: 20px;
+    }
+
+    .feature-box h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: seagreen;
+    }
+
+    .feature-box p {
+      color: dimgray;
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 25px;
+      background-color: darkslategray;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .site-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="site-header">
+    <div class="logo">Simple Shop</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+    </nav>
+    <div class="cart">
+      🛒 Cart (3)
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>Everyday Essentials, Made Simple</h1>
+    <p>Quality products at honest prices. No fuss, just good stuff.</p>
+    <a href="#products" class="btn">Shop Now!</a>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-image">Backpack</div>
+        <h3>Canvas Backpack</h3>
+        <p class="price">$45.00</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">Sneakers</div>
+        <h3>White Sneakers</h3>
+        <p class="price">$60.00</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">Watch</div>
+        <h3>Classic Watches</h3>
+        <p class="price">$85.00</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">Sunglasses</div>
+        <h3>Round Sunglasses</h3>
+        <p class="price">$25.00</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">Jacket</div>
+        <h3>Denim Jacket</h3>
+        <p class="price">$70.00</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">Mug</div>
+        <h3>Ceramic Mug</h3>
+        <p class="price">$12.00</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-box">
+      <h3>Free Shipping</h3>
+      <p>On all orders over $50</p>
+    </div>
+    <div class="feature-box">
+      <h3>Easy Returns</h3>
+      <p>30 day return policy</p>
+    </div>
+    <div class="feature-box">
+      <h3>Secure Payment</h3>
+      <p>100% protected checkout</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2017 Simple Shop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
